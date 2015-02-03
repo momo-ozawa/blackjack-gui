@@ -1,0 +1,29 @@
+function drawVisualization() {
+  // Create and populate the data table.
+  var data = google.visualization.arrayToDataTable([
+    ['Bin', 'Frequency'],
+    ['1'  ,  0 ],
+    ['2'  ,  0 ],
+    ['3'  ,  378381 ],
+    ['4'  ,  395254 ],
+    ['5'  ,  172155 ],
+    ['6'  ,  45549 ],
+    ['7'  ,  7734 ],
+    ['8'  ,  857 ],
+    ['9'  ,  67 ],
+    ['10' ,  3 ],
+
+    
+  ]);
+
+  // Create and draw the visualization.
+  new google.visualization.ColumnChart(document.getElementById('visualization')).
+      draw(data,
+           {title:"Number of cards dealt until bust in Blackjack",
+            width:600, height:400,
+            hAxis: {title: "Number of cards"}}
+      );
+}
+​
+
+
