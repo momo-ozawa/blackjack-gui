@@ -31,4 +31,3 @@ class CardLabel(Label):
             self.configure(image=CardLabel.images[id])
         else:
             self.configure(image=CardLabel.blank_image)
-            

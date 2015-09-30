@@ -1,5 +1,5 @@
 """
-blackjack.py: Assignment 5.1, CIS 211
+Blackjack.py: Assignment 5.1, CIS 211
 Author: Momo Ozawa
 
 A blackjack GUI game.
@@ -12,16 +12,15 @@ from Deck import *
 
 ###############################################################################################################
 
-# note that total(hands) will calculate points based on the
-# BlackjackCard points system because the class Deck() now has 
-# and optional argument to specify class. 
+# Note that total(hands) will calculate points based on the BlackjackCard points system 
+# Deck() now has and optional argument to specify class 
 deck = Deck(BlackjackCard)
 
-# dealer and player hands
+# Dealer and player hands
 dealer = [ ] 
 player = [ ] 
 
-# score tally
+# Score tally
 dwin_score = 0
 pwin_score = 0
 
@@ -39,8 +38,8 @@ def reset():
     for card in range(6):
         dealer_label[card].display('blank')
         player_label[card].display('blank')
-    
-       
+
+
 def new_game():
     """Reset button states."""
     hit_button.config(state='disabled')
@@ -65,34 +64,33 @@ def playerwins():
     pwin_score += 1
     player_win.config(text = 'player wins: {}'.format(pwin_score))
 
-    
+
 def tiegame():
     """Show a message when there is a tie."""
     showinfo(message = 'Tie game!')
     new_game()
 
 
-
 def total(hand):
     """Compute total number of points for a hand in Blackjack."""
     num_aces = 0
     
-    # sum up the values of cards in the hand
+    # Sum up the values of cards in the hand
     result = points(hand)
     
-    # also sum up the number of aces
+    # Also sum up the number of aces
     for card in hand:
         if card.rank() == 12:
             num_aces += 1
             
-    # while value of hand is > 21 and there is an ace
-    # in the hand with value 11, convert its value to 1
+    # While value of hand is > 21 and there is an ace in the hand with value 11, 
+    # convert its value to 1
     while result > 21 and num_aces > 0:
         result -= 10
         num_aces -= 1
 
     return result
-    
+
 
 def debug():
     print("dealer hand =", dealer)
@@ -100,7 +98,6 @@ def debug():
     print("dealer score =", total(dealer))
     print("player score =", total(player)) 
 
-    
 
 def deal():
     """Shuffle a deck of cards, then deals 2 cards to the dealer (one face down 
@@ -110,8 +107,7 @@ def deal():
     reset()
     deck.shuffle()
     
-    # add the cards to the dealer's/player's hand (a list container)
-    # as they are dealt
+    # Add the cards to the dealer's/player's hand as they are dealt
     dealer += deck.deal(2)
     player += deck.deal(2)
 
@@ -133,7 +129,6 @@ def deal():
     # debug() 
 
 
-
 def hit():
     """Turn over the next card in the bottom row and update 
     the player's score."""
@@ -152,7 +147,6 @@ def hit():
         playerwins()
 
     # debug()
-
 
 
 def card_pass():
@@ -181,16 +175,15 @@ def card_pass():
         tiegame()
 
     # debug()
-    
+
 ###############################################################################################################  
+
 root = Tk()
+CardLabel.load_images()  # Call after creating top level app
 
-
-CardLabel.load_images()  # call after creating top level app
- 
 ###############################################################################################################
 
-# card labels 
+# Card labels 
 dealer_label = [0]*6
 player_label = [0]*6
 
@@ -208,16 +201,16 @@ for card in range(6):
 
 ###############################################################################################################
 
-# score update label
+# Score update label
 dealer_win = Label(root, text='dealer wins:  ')
 dealer_win.grid(row=0, column=6, sticky=W, padx=20, pady=10)
 
 player_win = Label(root, text='player wins:  ')
 player_win.grid(row=1, column=6, sticky=W, padx=20, pady=10)
-   
+
 ###############################################################################################################
 
-# control buttons
+# Control buttons
 deal_button = Button(root, text='Deal', command=deal)
 deal_button.grid(row=2, column=0, columnspan=2, pady=10)
 
@@ -229,14 +222,10 @@ pass_button.grid(row=2, column=4, columnspan=2, pady=10)
 
 ###############################################################################################################
 
-root.rowconfigure(0, minsize=115)   # note the grid is part of the parent...
+# Note the grid is part of the parent
+root.rowconfigure(0, minsize=115)
 root.columnconfigure(0, minsize=85)
 
 
 if __name__ == '__main__':
     root.mainloop()
-        
-
-
-    
-    

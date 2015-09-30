@@ -12,8 +12,6 @@ function drawVisualization() {
     ['8'  ,  857 ],
     ['9'  ,  67 ],
     ['10' ,  3 ],
-
-    
   ]);
 
   // Create and draw the visualization.

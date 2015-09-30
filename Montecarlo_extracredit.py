@@ -21,7 +21,7 @@ def montecarlo():
     
     # add 1 to the appropriate bin
     h.count(len(hand))
-    
+
 
 def main():
     print("Iterating 1,000,000 hands...")
@@ -30,7 +30,6 @@ def main():
         montecarlo()
         
     print(h) # print the histogram result in shell
-    
+
 
 main()
-    
