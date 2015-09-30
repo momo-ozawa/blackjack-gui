@@ -1,6 +1,8 @@
 # _Blackjack_
 
-##### Play Blackjack.
+##### Play blackjack.
+
+A GUI to play a game of blackjack made entirely from scratch. The project is built on two main modules: Card.py and Deck.py. Card.py contains the class Card which represents a playing card, and the subclass BlackjackCard which inherits methods from Card. Deck.py contains the class Deck that inherits from Python's list class.
 
 ## Setup
 Clone this git repository on your computer 
@@ -17,7 +19,6 @@ Run this project in terminal
 ```
 python3 Blackjack.py
 ```
-
 
 ## Languages/Libraries Used
 * Python, Tkinter
