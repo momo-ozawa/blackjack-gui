@@ -33,7 +33,6 @@ def montecarlo_simulation(sample_size):
     print("Creating a Montecarlo model with %d samples..." % sample_size)
     for i in range(sample_size):
         update_bin()
-    # Print the histogram result
     print(histogram)
 
 
