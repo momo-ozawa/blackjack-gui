@@ -31,5 +31,3 @@ class Histogram(dict):
 
     def __delitem__(self, index):
         raise Exception("can't delete a bin from a histogram")
-
-
