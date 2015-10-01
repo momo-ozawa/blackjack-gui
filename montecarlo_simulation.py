@@ -1,3 +1,13 @@
+"""
+montecarlo_simulation.py: Assignment 2.2, CIS 211
+Author: Momo Ozawa
+
+The window in your Blackjack program has room for 6 cards for each player. Is this
+enough space? What is the probability of a player needing more than 6 cards?
+
+One way to figure this out is by running a Monte Carlo simulation.
+"""
+
 import sys
 from Deck import *
 from Histogram import *
@@ -30,12 +40,22 @@ def update_bin():
 
 
 def montecarlo_simulation(sample_size):
-    print("Creating a Montecarlo model with %d samples..." % sample_size)
+    print("Creating a Montecarlo model with {} samples... \n".format(sample_size))
     for i in range(sample_size):
         update_bin()
-    print(histogram)
+    return histogram
+
+
+def percentage_by_hand(histogram, sample_size):
+    key_value_list = [(k, v) for k, v in histogram.items()]
+    for tup in key_value_list:
+        print("{:>2.0f} cards: {:>7.3f}%".format(tup[0], (tup[1] / sample_size * 100)))
 
 
 if __name__ == "__main__":
     n = int(input("Enter your sample size:"))
-    montecarlo_simulation(n)
+    results = montecarlo_simulation(n)
+    print("HISTOGRAM RESULTS:")
+    print(results, "\n")
+    print("PERCENTAGE BY BIN:")
+    percentage_by_hand(results, n)
