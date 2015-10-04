@@ -4,6 +4,8 @@
 
 A blackjack GUI game made entirely from scratch. The project is built on two main modules: Card.py and Deck.py. Card.py contains the class Card which represents a playing card, and the subclass BlackjackCard which inherits methods from Card. Deck.py contains the class Deck that inherits from Python's list class.
 
+![Screenshot](https://github.com/momo-ozawa/blackjack_gui/blob/master/winnerwinner.png)
+
 ## Setup
 Clone this git repository on your computer 
 ```
