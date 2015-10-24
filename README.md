@@ -1,4 +1,4 @@
-# Blackjack
+# _Blackjack_
 
 ##### _CIS 211 project:_ Play blackjack.
 
