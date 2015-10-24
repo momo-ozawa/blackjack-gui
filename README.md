@@ -1,8 +1,11 @@
-# _Blackjack_
+# Blackjack
 
 ##### Play blackjack.
 
-A blackjack GUI game made entirely from scratch. The project is built on two main modules: Card.py and Deck.py. Card.py contains the class Card which represents a playing card, and the subclass BlackjackCard which inherits methods from Card. Deck.py contains the class Deck that inherits from Python's list class.
+## Description
+* A blackjack GUI game made entirely from scratch. The project is built on two main modules: Card.py and Deck.py. 
+* Card.py contains the class Card which represents a playing card, and the subclass BlackjackCard which inherits methods from Card. 
+* Deck.py contains the class Deck that inherits from Python's list class.
 
 ![Screenshot](https://github.com/momo-ozawa/blackjack_gui/blob/master/winnerwinner.png)
 
@@ -22,11 +25,11 @@ Run this project in terminal
 python3 Blackjack.py
 ```
 
-## Languages/Libraries Used
+## Technologies Used
 * Python, Tkinter
 
 ## Legal
-Copyright (c) 2014 _**Momo Ozawa**_
+Copyright (c) 2014 **Momo Ozawa**
 
 This software is licensed under the MIT license.
 
