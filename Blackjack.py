@@ -202,10 +202,10 @@ for card in range(6):
 ###############################################################################################################
 
 # Score update label
-dealer_win = Label(root, text='dealer wins:  ')
+dealer_win = Label(root, text='Dealer\'s score:  ')
 dealer_win.grid(row=0, column=6, sticky=W, padx=20, pady=10)
 
-player_win = Label(root, text='player wins:  ')
+player_win = Label(root, text='Player\'s score:  ')
 player_win.grid(row=1, column=6, sticky=W, padx=20, pady=10)
 
 ###############################################################################################################
