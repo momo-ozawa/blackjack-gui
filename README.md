@@ -1,6 +1,6 @@
 # Blackjack
 
-##### Play blackjack.
+##### _CIS 211 project:_ Play blackjack.
 
 ## Description
 * A blackjack GUI game made entirely from scratch. The project is built on two main modules: Card.py and Deck.py. 
