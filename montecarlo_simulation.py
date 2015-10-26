@@ -49,7 +49,7 @@ def montecarlo_simulation(sample_size):
 def percentage_by_hand(histogram, sample_size):
     key_value_list = [(k, v) for k, v in histogram.items()]
     for tup in key_value_list:
-        print("{:>2.0f} cards: {:>7.3f}%".format(tup[0], (tup[1] / sample_size * 100)))
+        print("{:>2.0f} cards: {:>7.4f}%".format(tup[0], (tup[1] / sample_size * 100)))
 
 
 if __name__ == "__main__":
